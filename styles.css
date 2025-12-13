@@ -180,17 +180,17 @@ body{
   width:56px;
   height:56px;
   border-radius:999px;
-  overflow:hidden;
+  overflow:hidden;           /* ini yang nge-cut biar ga melebar */
   flex:0 0 auto;
   border:2px solid #fff;
   box-shadow:0 8px 20px rgba(0,0,0,.15);
-  background: none; /* penting biar ga campur gradient */
+  background:none;
 }
 
 .avatar img{
-  width:100%;
+  width:100%;               /* ini yang nge-lock gambar */
   height:100%;
-  object-fit:cover;
+  object-fit:cover;         /* biar rapi kepotong */
   display:block;
 }
 
