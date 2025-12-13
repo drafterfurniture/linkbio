@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Customin | Custom Furniture</title>
+  <meta name="description" content="Customin bikin furniture custom untuk rumah, cafe, dan kantor. Bisa request ukuran, bahan, dan finishing. Konsultasi cepat via WhatsApp." />
+  <link rel="canonical" href="https://customin.co/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Customin | Custom Furniture" />
+  <meta property="og:description" content="Furniture custom untuk rumah, cafe, dan kantor. Request ukuran, bahan, dan finishing." />
+  <meta property="og:url" content="https://customin.co/" />
+  <meta property="og:image" content="https://customin.co/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+  <!-- Local Font Awesome -->
+  <link rel="stylesheet" href="./assets/fa/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="quoteWrap">
+        <h1 class="quoteTitle">Custom Furniture for Modern Living, <span>Customin</span></h1>
+      </div>
+      <div class="avatar" aria-hidden="true"></div>
+    </header>
+
+    <section class="section">
+      <div class="grid">
+        <a class="cardLink" href="https://wa.me/6281234567890?text=Halo%20Customin%2C%20mau%20konsultasi%20custom%20furniture" target="_blank" rel="noopener">
+          <div class="cardLeft">
+            <div class="icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="cardText">
+              <p class="cardTitle">Konsultasi WhatsApp</p>
+              <p class="cardDesc">Brief cepat, kirim ukuran, dan referensi</p>
+            </div>
+          </div>
+          <div class="chev" aria-hidden="true">›</div>
+        </a>
+
+        <a class="cardLink" href="https://instagram.com/customin.co" target="_blank" rel="me noopener">
+          <div class="cardLeft">
+            <div class="icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
+            <div class="cardText">
+              <p class="cardTitle">Portofolio</p>
+              <p class="cardDesc">Dokumentasi hasil project</p>
+            </div>
+          </div>
+          <div class="chev" aria-hidden="true">›</div>
+        </a>
+
+        <a class="cardLink" href="https://threads.net/@customin.co" target="_blank" rel="me noopener">
+          <div class="cardLeft">
+            <div class="icon" aria-hidden="true"><i class="fa-brands fa-threads"></i></div>
+            <div class="cardText">
+              <p class="cardTitle">Threads</p>
+              <p class="cardDesc">Update terbaru dan showcase</p>
+            </div>
+          </div>
+          <div class="chev" aria-hidden="true">›</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p class="fineprint">© <span id="year"></span> Customin</p>
+    </footer>
+
+    <!-- Sticky social dock -->
+    <nav class="dock" aria-label="Social links">
+      <div class="dockInner">
+        <a class="dockItem" href="https://threads.net/@customin.co" target="_blank" rel="me noopener" aria-label="Threads">
+          <i class="fa-brands fa-threads"></i>
+        </a>
+
+        <a class="dockItem" href="https://instagram.com/customin.co" target="_blank" rel="me noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="dockItem" href="https://tiktok.com/@customin.co" target="_blank" rel="me noopener" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a class="dockItem isActive" href="https://wa.me/6281234567890?text=Halo%20Customin" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="dockLabel">WhatsApp</span>
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+
+    // Schema JSON-LD (breadcrumb ada di code, tapi tidak ditampilkan)
+    const url = 'https://customin.co';
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${url}/#website`,
+          "url": `${url}/`,
+          "name": "Customin | Custom Furniture"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": `${url}/#business`,
+          "name": "Customin",
+          "url": `${url}/`,
+          "areaServed": "Indonesia",
+          "telephone": "+62-812-3456-7890",
+          "sameAs": [
+            "https://instagram.com/customin.co",
+            "https://tiktok.com/@customin.co",
+            "https://threads.net/@customin.co"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": `${url}/#links`,
+          "name": "Links",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Konsultasi WhatsApp","url":"https://wa.me/6281234567890"},
+            {"@type":"ListItem","position":2,"name":"Portofolio","url":"https://instagram.com/customin.co"},
+            {"@type":"ListItem","position":3,"name":"Threads","url":"https://threads.net/@customin.co"}
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${url}/#breadcrumb`,
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Home","item":`${url}/`}
+          ]
+        }
+      ]
+    };
+
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(jsonLd);
+    document.head.appendChild(s);
+  </script>
+</body>
+</html>
